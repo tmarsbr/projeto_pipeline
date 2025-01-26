@@ -1,51 +1,18 @@
-# Dependencies
-node_modules/
-/.pnp
-.pnp.js
-
-# Testing
-/coverage
-
-# Production
-/build
-/dist
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Editor directories and files
-.idea/
-.vscode/
-*.swp
-*.swo
-.DS_Store
-
 # .gitignore
 
-# Ambiente virtual Python
+# Ignora APENAS arquivos do Windows (ex: Zone.Identifier)
+*.Identifier
+
+# Ignora checkpoints do Jupyter (dentro da pasta notebooks)
+notebooks/.ipynb_checkpoints/
+
+# Ignora logs (dentro da pasta dados_editados)
+dados_editados/*.log
+
+# Ambiente virtual
 .venv/
 venv/
 
-# Arquivos de dados brutos (exemplo)
-dados_brutos/
-
-# Arquivos temporários do Windows
-*.Identifier
-
-# Outros padrões comuns
+# Outros padrões
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.DS_Store
-.env
-*.log
