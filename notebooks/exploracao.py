@@ -118,6 +118,18 @@ dados_combinados_tabela[1]
 # Verificando o último registro de dados
 dados_combinados_tabela[-1]
 
+# %% [markdown]
+# # salvando os dados
+
+# %%
+# Definindo o caminho para salvar os dados combinados
+path_dados_combinados = '../data_processed/dados_combinados.csv'
+
+# Salvando os dados combinados em um arquivo CSV
+with open(path_dados_combinados, 'w') as file:
+    writer = csv.writer(file)
+    writer.writerows(dados_combinados_tabela)
+
 # %%
 
 
