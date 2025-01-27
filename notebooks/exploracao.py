@@ -123,7 +123,7 @@ dados_combinados_tabela[-1]
 
 # %%
 # Definindo o caminho para salvar os dados combinados
-path_dados_combinados = '../data_processed/dados_combinados.csv'
+path_dados_combinados = '../dados_processados/dados_combinados.csv'
 
 # Salvando os dados combinados em um arquivo CSV
 with open(path_dados_combinados, 'w') as file:
