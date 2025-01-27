@@ -132,6 +132,6 @@ with open(path_dados_combinados, 'w') as file:
 
 # %%
 
-
+print('Fim da execução')
 
 # %%
