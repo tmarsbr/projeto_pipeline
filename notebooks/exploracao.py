@@ -121,6 +121,6 @@ dados_combinados_tabela[-1]
 # %%
 
 print(dados_combinados_tabela[0])
-
+print(dados_combinados_tabela[1])
 
 # %%
