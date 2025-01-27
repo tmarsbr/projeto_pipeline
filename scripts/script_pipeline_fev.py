@@ -220,3 +220,5 @@ salvando_dados(dados_fusao_tabela, path_dados_combinados)
 print(f"Dados salvos em: {path_dados_combinados}")
 
 # %%
+
+print("Fim do script.")
