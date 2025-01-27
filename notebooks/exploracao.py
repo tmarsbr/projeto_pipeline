@@ -8,23 +8,21 @@
 import json
 import csv
 
-
 # %% [markdown]
-# # lendo dados 
+# # Lendo dados 
 
 # %%
-# dados json impresa A
+# dados json empresa A
 path_jason = '../dados_brutos/dados_empresaA.json'
 
-# dados csv impresa B
+# dados csv empresa B
 path_csv = '../dados_brutos/dados_empresaB.csv'
 
-
 # %% [markdown]
-# # tratando json e csv para pipeline
+# # Tratando json e csv para pipeline
 
 # %%
-# trabalhando dados json
+# Trabalhando dados json
 with open(path_jason) as f:
     df_json = json.load(f)
 
@@ -60,7 +58,7 @@ for old_dict in dados_csv:
 new_dados_csv[0]
 
 # %% [markdown]
-# # verificando quantidade de registros
+# # Verificando quantidade de registros
 
 # %%
 # Verificando a quantidade de registros em cada conjunto de dados
@@ -70,7 +68,7 @@ len(df_json)
 len(new_dados_csv)
 
 # %% [markdown]
-# # unindo os dados
+# # Unindo os dados
 
 # %%
 # Combinando os dados das duas empresas
@@ -90,7 +88,7 @@ combined_list[0]
 combined_list[-1]
 
 # %% [markdown]
-# # criando uma lista de listas
+# # Criando uma lista de listas
 
 # %%
 # Confirmando o nome das colunas
@@ -119,7 +117,7 @@ dados_combinados_tabela[1]
 dados_combinados_tabela[-1]
 
 # %% [markdown]
-# # salvando os dados
+# # Salvando os dados
 
 # %%
 # Definindo o caminho para salvar os dados combinados
@@ -131,7 +129,6 @@ with open(path_dados_combinados, 'w') as file:
     writer.writerows(dados_combinados_tabela)
 
 # %%
-
 print('Fim da execução')
 
 # %%
