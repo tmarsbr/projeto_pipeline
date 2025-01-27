@@ -25,6 +25,8 @@ dados_empresaB = Dados(path_csv, 'csv')
 
 print(dados_empresaA.nome_colunas)
 print(dados_empresaB.nome_colunas)
+print(dados_empresaA.qtd_linhas)
+print(dados_empresaB.qtd_linhas)
 
 # %% [markdown]
 # # Funções de transformação e salvamento de dados
@@ -41,22 +43,6 @@ def size_data(dados):
     int: Tamanho dos dados.
     """
     return len(dados)
-
-def join(dadosA, dadosB):
-    """
-    Junta dois conjuntos de dados em uma única lista.
-    
-    Args:
-    dadosA (list): Primeiro conjunto de dados.
-    dadosB (list): Segundo conjunto de dados.
-    
-    Returns:
-    list: Lista combinada dos dois conjuntos de dados.
-    """
-    combined_list = []
-    combined_list.extend(dadosA)
-    combined_list.extend(dadosB)
-    return combined_list
 
 def transformando_dados_tabela(dados, nomes_colunas):
     """
@@ -111,18 +97,15 @@ print(dados_empresaB.nome_colunas)
 # # Unindo os dados
 
 # %%
-dados_fusao = join(dados_empresaA.dados, dados_empresaB.dados)
-nomes_colunas_fusao = dados_empresaA.nome_colunas
-tamanho_dados_fusao = size_data(dados_fusao)
-
-print(f"Nome colunas dados fusão: {nomes_colunas_fusao}")
-print(f"Tamanho dos dados fusão: {tamanho_dados_fusao}")
+dados_fusao = Dados.join(dados_empresaA, dados_empresaB)
+print(dados_fusao.nome_colunas)
+print(dados_fusao.qtd_linhas)
 
 # %% [markdown]
 # # Salvando os dados
 
 # %%
-dados_fusao_tabela = transformando_dados_tabela(dados_fusao, nomes_colunas_fusao)
+dados_fusao_tabela = transformando_dados_tabela(dados_fusao.dados, dados_fusao.nome_colunas)
 
 path_dados_combinados = '../dados_processados/dados_combinados.csv'
 

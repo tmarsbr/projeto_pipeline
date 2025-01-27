@@ -7,6 +7,7 @@ class Dados:
         self.tipo_dados = tipo_dados
         self.dados = self.leitura_dados()
         self.nome_colunas = self.get_columns()
+        self.qtd_linhas = self.size_data()
 
     def leitura_json(self):
         """
@@ -44,6 +45,10 @@ class Dados:
             return self.leitura_csv()
         elif self.tipo_dados == 'json':
             return self.leitura_json()
+        elif self.tipo_dados == 'list':
+            dados = self.path
+            self.path = 'lista em memoria'
+            return dados
         else:
             raise ValueError("Tipo de arquivo não suportado: {}".format(self.tipo_dados))
 
@@ -71,3 +76,29 @@ class Dados:
             new_dados.append(dict_temp)
         self.dados = new_dados
         self.nome_colunas = self.get_columns()
+
+    def size_data(self):
+        """
+        Retorna o tamanho dos dados.
+        
+        Returns:
+        int: Tamanho dos dados.
+        """
+        return len(self.dados)
+
+    @staticmethod
+    def join(dadosA, dadosB):
+        """
+        Junta dois conjuntos de dados em uma única lista.
+        
+        Args:
+        dadosA (Dados): Primeiro conjunto de dados.
+        dadosB (Dados): Segundo conjunto de dados.
+        
+        Returns:
+        Dados: Objeto da classe Dados com os dados combinados.
+        """
+        combined_list = []
+        combined_list.extend(dadosA.dados)
+        combined_list.extend(dadosB.dados)
+        return Dados(combined_list, 'list')
