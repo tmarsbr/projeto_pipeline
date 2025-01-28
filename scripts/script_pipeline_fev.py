@@ -84,7 +84,7 @@ key_mapping = {
     'Nome do Item': 'Nome do Produto',
     'Classificação do Produto': 'Categoria do Produto',
     'Valor em Reais (R$)': 'Preço do Produto (R$)',
-    'Quantidade em Estoque': 'Quantidade de Estoque',
+    'Quantidade em Estoque': 'Quantidade em Estoque',
     'Nome da Loja': 'Filial',
     'Data da Venda': 'Data da Venda'
 }
