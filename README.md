@@ -1,7 +1,7 @@
 # Projeto de Integração de Dados - Clínicas Sanare e Reviver
 
 ## Descrição
-Este projeto visa integrar e uniformizar os dados das clínicas Sanare e Reviver durante seu processo de fusão.
+Este projeto visa integrar e uniformizar os dados das clínicas Sanare e Reviver durante seu processo de fusão. Utilizamos um pipeline de dados orientado a objetos para garantir a consistência e a qualidade dos dados ao longo do processo. Este projeto faz parte da formação inicial em Engenharia de Dados da Alura.
 
 ## Estrutura do Projeto
 ```
